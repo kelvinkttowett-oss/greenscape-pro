@@ -1,111 +1,141 @@
 function App() {
-  const services = [
-    "Lawn Maintenance",
-    "Garden Design",
-    "Tree Trimming",
-    "Irrigation Systems",
-    "Landscape Installation",
-    "Outdoor Lighting",
-  ];
-
   return (
-    <div>
-      {/* Navigation */}
-      <nav className="navbar">
-        <div className="logo">GreenScape Pro</div>
+    <div className="min-h-screen bg-white">
+      {/* Navbar */}
+      <nav className="bg-green-900 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+          <h1 className="text-2xl font-bold">GreenScape Pro</h1>
 
-        <ul className="nav-links">
-          <li>Home</li>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+          <ul className="hidden md:flex gap-8">
+            <li className="cursor-pointer hover:text-green-300">Home</li>
+            <li className="cursor-pointer hover:text-green-300">Services</li>
+            <li className="cursor-pointer hover:text-green-300">Projects</li>
+            <li className="cursor-pointer hover:text-green-300">About</li>
+            <li className="cursor-pointer hover:text-green-300">Contact</li>
+          </ul>
+        </div>
       </nav>
 
       {/* Hero */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Transform Your Outdoor Space</h1>
+      <section className="bg-gradient-to-r from-green-900 to-green-700 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-28">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Beautiful Outdoor
+            <br />
+            Spaces Built To Last
+          </h1>
 
-          <p>
-            Professional landscaping, lawn care, and garden design services
-            that bring your vision to life.
+          <p className="text-xl max-w-2xl mb-8">
+            Professional landscaping, lawn care, irrigation, and garden
+            design services for homes and businesses.
           </p>
 
-          <button>Get Free Quote</button>
+          <button className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+            Get Free Quote
+          </button>
         </div>
       </section>
 
       {/* Services */}
-      <section className="section">
-        <h2>Our Services</h2>
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-14">
+            Our Services
+          </h2>
 
-        <div className="services-grid">
-          {services.map((service) => (
-            <div className="card" key={service}>
-              <h3>{service}</h3>
-              <p>
-                Professional service delivered by experienced landscaping
-                specialists.
-              </p>
-            </div>
-          ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Lawn Maintenance",
+              "Garden Design",
+              "Irrigation Systems",
+              "Tree Trimming",
+              "Landscape Installation",
+              "Outdoor Lighting",
+            ].map((service) => (
+              <div
+                key={service}
+                className="bg-white shadow-lg rounded-xl p-8 hover:-translate-y-2 transition"
+              >
+                <h3 className="text-2xl font-semibold mb-4">{service}</h3>
+
+                <p className="text-gray-600">
+                  High-quality professional landscaping solutions tailored
+                  to your property.
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="bg-gray-100 py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-14">
+            Featured Projects
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="h-64 rounded-xl bg-green-700"></div>
+            <div className="h-64 rounded-xl bg-green-800"></div>
+            <div className="h-64 rounded-xl bg-green-900"></div>
+          </div>
         </div>
       </section>
 
       {/* About */}
-      <section className="section light">
-        <h2>About GreenScape Pro</h2>
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-8">
+            Why Choose GreenScape Pro?
+          </h2>
 
-        <p>
-          We help homeowners and businesses create beautiful, sustainable
-          outdoor environments through expert landscaping and maintenance.
-        </p>
-      </section>
-
-      {/* Projects */}
-      <section className="section">
-        <h2>Featured Projects</h2>
-
-        <div className="projects">
-          <div className="project">Luxury Garden Design</div>
-          <div className="project">Commercial Landscaping</div>
-          <div className="project">Modern Backyard Makeover</div>
+          <p className="text-lg text-gray-600">
+            We combine creativity, craftsmanship, and sustainability to
+            create outdoor spaces that enhance beauty, functionality,
+            and property value.
+          </p>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="section light">
-        <h2>What Clients Say</h2>
+      <section className="bg-green-50 py-24">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-12">
+            What Our Clients Say
+          </h2>
 
-        <div className="testimonial">
-          "GreenScape Pro completely transformed our yard. Highly recommended!"
-        </div>
+          <div className="bg-white shadow-lg rounded-xl p-8">
+            <p className="text-lg italic">
+              "GreenScape Pro completely transformed our backyard.
+              Professional service and amazing results."
+            </p>
 
-        <div className="testimonial">
-          "Professional team, excellent communication, beautiful results."
+            <h4 className="mt-4 font-semibold">
+              — Happy Homeowner
+            </h4>
+          </div>
         </div>
       </section>
 
       {/* Contact */}
-      <section className="section">
-        <h2>Get In Touch</h2>
+      <section className="bg-green-900 text-white py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready To Transform Your Landscape?
+          </h2>
 
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email Address" />
-          <textarea placeholder="Tell us about your project"></textarea>
+          <p className="mb-8">
+            Contact us today for a free consultation and estimate.
+          </p>
 
-          <button type="submit">Send Inquiry</button>
-        </form>
+          <button className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold">
+            Contact Us
+          </button>
+        </div>
       </section>
-
-      <footer>
-        <p>© 2026 GreenScape Pro. All Rights Reserved.</p>
-      </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
